@@ -14,12 +14,9 @@ class sqlwebapp (
   file { "${docroot}/CloudShop":
     ensure  => directory,
   }
-  staging::file { 'CloudShop.zip':
-    source => "${file_source}/CloudShop.zip",
-  }
 
   archive { 'Unzip webapp CloudShop':
-    path         => $docroot,
+    source       => "${file_source}/CloudShop.zip",
     cleanup      => true,
     extract      => true,
     extract_path => "${docroot}/CloudShop",
