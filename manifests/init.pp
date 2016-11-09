@@ -17,6 +17,7 @@ class sqlwebapp (
 
   archive { 'Unzip webapp CloudShop':
     source       => "${file_source}/CloudShop.zip",
+    path         => "${docroot}/CloudShop.zip",
     cleanup      => true,
     extract      => true,
     extract_path => "${docroot}/CloudShop",
