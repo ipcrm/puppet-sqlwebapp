@@ -21,7 +21,7 @@ class sqlwebapp (
     cleanup      => true,
     extract      => true,
     extract_path => "${docroot}/CloudShop",
-    creates      => "${docroot}/Global.asax",
+    creates      => "${docroot}/CloudShop/Global.asax",
     require      => File["${docroot}/CloudShop"],
     notify       => Exec['ConvertAPP'],
   }
