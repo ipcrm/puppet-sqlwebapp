@@ -9,8 +9,6 @@ class sqlwebapp (
   $file_source   = 'https://s3-us-west-2.amazonaws.com/tseteam/files/sqlwebapp',
 ) {
 
-  require sqlwebapp::iis
-
   file { "${docroot}/CloudShop":
     ensure  => directory,
   }
